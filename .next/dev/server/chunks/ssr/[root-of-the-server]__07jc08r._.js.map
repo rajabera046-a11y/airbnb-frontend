@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/ASUS/Desktop/Interview/Frontend/src/app/rooms/[id]/page.tsx"],"sourcesContent":["import { notFound } from \"next/navigation\";\r\nimport ListingExperience from \"@/components/ListingExperience\";\r\nimport { getListing } from \"@/lib/listing\";\r\n\r\nexport default async function ListingPage({ params }: { params: Promise<{ id: string }> }) {\r\n  const { id } = await params;\r\n  const listing = await getListing(id);\r\n  if (id !== listing.id) notFound();\r\n  return <ListingExperience listing={listing} />;\r\n}\r\n"],"names":["ListingPage","params","id","listing","getListing","ListingExperience"],"mappings":";;;;;AAAA;AAAA;;;;;;;;;;;;;;;AAIe,eAAeA,YAAY,EAAEC,MAAM,EAAuC;IACvF,MAAM,EAAEC,EAAE,EAAE,GAAG,MAAMD;IACrB,MAAME,UAAU,MAAMC,WAAWF;IACjC,IAAIA,OAAOC,QAAQD,EAAE,EAAE,IAAA,iMAAQ;IAC/B,qBAAO,8OAACG;QAAkBF,SAASA;;;;;;AACrC"}}]
+}
